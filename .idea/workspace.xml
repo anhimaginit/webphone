@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\doctor.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\home.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\hospital.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\images\profile.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_appointment.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_contact.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_forget.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_laboratory.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_login.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_login_alt.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_pharmacy.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_privacyPolicy.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_profile.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_questions.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_register.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\page_termsConditions.php" afterPath="" />
+      <change type="DELETED" beforePath="C:\xampp\htdocs\webphone\public\test.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/includes/extra.php" afterPath="$PROJECT_DIR$/public/includes/extra.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/includes/footer.php" afterPath="$PROJECT_DIR$/public/includes/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/includes/header.php" afterPath="$PROJECT_DIR$/public/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/init.ui.php" afterPath="$PROJECT_DIR$/public/init.ui.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/includes/js.php" afterPath="$PROJECT_DIR$/public/includes/js.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/includes/nav.php" afterPath="$PROJECT_DIR$/public/includes/nav.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/your_script.js" afterPath="$PROJECT_DIR$/public/js/your_script.js" />
+    </list>
+    <ignored path="bacsi.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/Dummy.txt" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1649037306887" ignored="false" />
+    <file path="$PROJECT_DIR$/../API_WEBPHONE/lib/class.company.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648806344982" ignored="false" />
+    <file path="/class.company.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648806344572" ignored="false" />
+    <file path="/dashboard_admin.js" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648797948261" ignored="false" />
+    <file path="/your_script.js" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648785167114" ignored="false" />
+    <file path="$PROJECT_DIR$/../API_WEBPHONE/_company_short_bids.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648785247165" ignored="false" />
+    <file path="/dashboard_admin.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648801340854" ignored="false" />
+    <file path="$PROJECT_DIR$/../API_WEBPHONE/_branch_bids.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648799527545" ignored="false" />
+    <file path="/_branch_bids.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648796747555" ignored="false" />
+    <file path="/web_phone.css" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648867615454" ignored="false" />
+    <file path="$PROJECT_DIR$/../API_WEBPHONE/_companies.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648800825985" ignored="false" />
+    <file path="/_companies.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648799434697" ignored="false" />
+    <file path="/login.js" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648800645590" ignored="false" />
+    <file path="$PROJECT_DIR$/../API_WEBPHONE/_branch_uid.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648806332931" ignored="false" />
+    <file path="/branch.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1649037405340" ignored="false" />
+    <file path="/branch.js" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1649038393543" ignored="false" />
+    <file path="/nav.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648804562214" ignored="false" />
+    <file path="/dashboard.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648868189556" ignored="false" />
+    <file path="/class.login.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648864865323" ignored="false" />
+    <file path="$PROJECT_DIR$/../API_WEBPHONE/lib/class.login.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648864865323" ignored="false" />
+    <file path="/user.js" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1648867431703" ignored="false" />
+    <file path="$PROJECT_DIR$/../CRM API/lib/db.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1649044928357" ignored="false" />
+    <file path="$PROJECT_DIR$/../CRM API/lib/class.common.php" changelist="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" time="1649045016289" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="bacsi" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="web_phone.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css1/web_phone.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="69" column="1" selection-start="1980" selection-end="1988" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="your_script.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/your_script.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="16" selection-start="761" selection-end="801" vertical-scroll-proportion="0.15697674">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_admin.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/dashboard_admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="93" selection-start="6913" selection-end="6913" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="branch.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/branch.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="212" column="17" selection-start="11275" selection-end="11275" vertical-scroll-proportion="-14.666667">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="branch.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/branch/branch.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="70" column="58" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/user/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="50" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/dashboard.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="0" selection-start="3233" selection-end="3344" vertical-scroll-proportion="-1.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard_admin.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/dashboard/dashboard_admin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="176" column="29" selection-start="6652" selection-end="6652" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1648806052801" expanded="false" signature="3395:3428" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/public/includes/header.php" />
+        <option value="$PROJECT_DIR$/public/js/register_login/login.js" />
+        <option value="$PROJECT_DIR$/public/includes/nav.php" />
+        <option value="$PROJECT_DIR$/public/init.ui.php" />
+        <option value="$PROJECT_DIR$/public/js/dashboard/dashboard_admin.js" />
+        <option value="$PROJECT_DIR$/public/js/your_script.js" />
+        <option value="$PROJECT_DIR$/public/dashboard_admin.php" />
+        <option value="$PROJECT_DIR$/public/assets/css1/web_phone.css" />
+        <option value="$PROJECT_DIR$/public/js/user/user.js" />
+        <option value="$PROJECT_DIR$/public/dashboard.php" />
+        <option value="$PROJECT_DIR$/public/branch.php" />
+        <option value="$PROJECT_DIR$/public/js/branch/branch.js" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-7" />
+    <option name="width" value="1295" />
+    <option name="height" value="736" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="true" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="register_login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dashboard" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="branch" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="includes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bacsi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webphone" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CRM API" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a65fcf3f-bfac-4c15-90e1-7d88911d3b9a" name="Default" comment="" />
+      <created>1648775803004</created>
+      <updated>1648775803004</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="0" width="1295" height="736" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24979724" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/js/your_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="23" selection-start="1424" selection-end="1443" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dashboard_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="93" selection-start="7392" selection-end="7398" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/dashboard/dashboard_admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="189" column="0" selection-start="7054" selection-end="7054" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1648806052801" expanded="false" signature="3395:3428" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/register_login/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="43" selection-start="2243" selection-end="2243" vertical-scroll-proportion="0.21454546" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/includes/nav.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="20" selection-start="1666" selection-end="1666" vertical-scroll-proportion="-0.077844314" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/init.ui.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="2" selection-start="445" selection-end="445" vertical-scroll-proportion="0.2125" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="306" column="80" selection-start="17426" selection-end="17426" vertical-scroll-proportion="0.3233533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/dashboard/dashboard_admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="29" selection-start="6652" selection-end="6652" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1648806052801" expanded="false" signature="3395:3428" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dashboard_admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="93" selection-start="6913" selection-end="6913" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavascriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2147" column="0" selection-start="37848" selection-end="37848" vertical-scroll-proportion="0.33333334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css1/web_phone.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="1" selection-start="1980" selection-end="1988" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/user/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="50" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="3233" selection-end="3344" vertical-scroll-proportion="-1.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/branch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="17" selection-start="11275" selection-end="11275" vertical-scroll-proportion="-14.666667">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#main#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/branch/branch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="58" selection-start="3040" selection-end="3040" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/your_script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="16" selection-start="761" selection-end="801" vertical-scroll-proportion="0.15697674">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
