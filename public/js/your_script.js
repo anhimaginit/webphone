@@ -38,14 +38,19 @@ var link = {
     /**-----------session---------------------------- */
     _saveSession: host2 + 'php/request.setSession.php',
     _clearSession: host2 + 'php/clearSession.php',
-    /**-----------profile---------------------------- */
-    _user:host + 'user.php',
+    /**-----------Login---------------------------- */
     _login:host + '_login.php',
+    /**-----------User---------------------------- */
+    _user:host + 'user.php',
+    _users_search:host + '_users_search.php',
     /**-----------Company---------------------------- */
     _companies:host + '_companies.php',
     _company_short_bids:host + '_company_short_bids.php',
     _branch_bids:host + '_branch_bids.php',
-    _branch_uid:host + '_branch_uid.php'
+    _branch_uid:host + '_branch_uid.php',
+
+    /**-----------ACL---------------------------- */
+    _roles:host + '_roles.php',
 };
 
     var _token = 'd2FycmFudHlfYnJhbmRvbl9wcm9qZWN0';

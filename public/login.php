@@ -37,11 +37,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                             </div>
                                             <div class="form-group">
                                                 <label class="form-label" for="u_password">Passwork</label>
-                                                <input type="password" id="u_password" class="form-control form-control-lg" placeholder="password" value="password123" required>
+                                                <input type="password" id="u_password" class="form-control form-control-lg" placeholder="password" value="" required>
                                                 <div class="invalid-feedback">Enter your password</div>
                                                 <div class="help-block">Enter your password</div>
                                             </div>
-
 
                                         </form>
                                         <div class="row no-gutters">

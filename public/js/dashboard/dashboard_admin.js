@@ -7,16 +7,16 @@ dashboard_admin.DESCRIPTION  = "Class dashboard_admin";
 dashboard_admin.prototype.constructor = dashboard_admin;
 dashboard_admin.prototype = {
     init:function(){
-        dashboard_admin.prototype.get_companies(u_id_login,u_type_login);
+        dashboard_admin.prototype.get_companies(u_id_login,role);
         //event
         $('#c-search').unbind('click').bind('click',function(){
-            dashboard_admin.prototype.get_companies(u_id_login,u_type_login);
+            dashboard_admin.prototype.get_companies(u_id_login,role);
         })
 
 
         $('#c-reset').unbind('click').bind('click',function(){
             $('#c-name').val('');
-            dashboard_admin.prototype.get_companies(u_id_login,u_type_login);
+            dashboard_admin.prototype.get_companies(u_id_login,role);
         })
 
         $('#c-list').on('click','.branch-view',function(){

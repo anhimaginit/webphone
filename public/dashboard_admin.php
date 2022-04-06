@@ -14,15 +14,13 @@ $_head = '	<!-- Optional: page related CSS-->
 ';
 $_description = 'Admin';
 
-if(count($_SESSION) ==0){
-    header("Location: login.php");
-}
+if(!isset($_SESSION['web_phone'])) header("Location: login.php");
 
 if($_SESSION['u_type'] =="user"){
     header("Location: dashboard.php");
 }
 
-//print_r($_SESSION);
+//print_r($_SESSION["acl"]["permission"]);
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -41,7 +39,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         <div class="page-wrapper">
             <div class="page-inner">
 
-                <?php //include_once APP_PATH.'/includes/nav.php'; ?>
+                <?php include_once APP_PATH.'/includes/nav.php'; ?>
 
                 <div class="page-content-wrapper">
                     <?php include_once APP_PATH.'/includes/header.php'; ?>
@@ -315,7 +313,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
         <?php include_once APP_PATH.'/includes/js.php'; ?>
         <script type="text/javascript">
             var u_id_login='<?php echo $_SESSION['u_id'];?>';
-            var u_type_login='<?php echo $_SESSION['u_type'];?>';
+            var role='<?php echo $_SESSION['role'];?>';
 
         </script>
 

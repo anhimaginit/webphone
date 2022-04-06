@@ -4,7 +4,7 @@
 /*
 if(strpos($_SERVER['REQUEST_URI'],"physician_infomation.php") ==false && strpos($_SERVER['REQUEST_URI'],"physician_list.php") ==false && strpos($_SERVER['REQUEST_URI'],"facility_list.php")==false && strpos($_SERVER['REQUEST_URI'],"facility_information.php")==false &&
 strpos($_SERVER['REQUEST_URI'],"faq.php")==false && strpos($_SERVER['REQUEST_URI'],"lab_list.php" ==false)){
-    if (count($_SESSION)==0){
+    if (isset($_SESSION['web_phone'])){
         //header("Location: login.php");
         echo "<script type='text/javascript'>window.top.location='login.php';</script>"; exit;
     }
@@ -250,12 +250,14 @@ strpos($_SERVER['REQUEST_URI'],"faq.php")==false && strpos($_SERVER['REQUEST_URI
         <!-- app user menu -->
         <div>
             <?php
-            if(count($_SESSION)>0){ ?>
-                <a href="#" data-toggle="dropdown" title="drlantern@gotbootstrap.com" class="header-icon d-flex align-items-center justify-content-center ml-2">
+            if(isset($_SESSION['web_phone'])){ ?>
+                <a href="php/clearSession.php" title="webphone" class="header-icon d-flex align-items-center justify-content-center ml-2" style="color: #0000ff">
+                    <strong>Logout</strong>
+                </a>
+                <!--
+                <a href="#" data-toggle="dropdown" title="webphone" class="header-icon d-flex align-items-center justify-content-center ml-2">
                     <img src="//s3.amazonaws.com/appforest_uf/f1584376106762x402033725538128100/avatar.png" class="profile-image rounded-circle" alt="">
-                    <!-- you can also add username next to the avatar with the codes below:
-                                        <span class="ml-1 mr-1 text-truncate text-truncate-header hidden-xs-down">Me</span>
-                                        <i class="ni ni-chevron-down hidden-xs-down"></i> -->
+
                 </a>
                 <div class="dropdown-menu dropdown-menu-animated dropdown-lg">
                     <div class="dropdown-header bg-trans-gradient d-flex flex-row py-4 rounded-top">
@@ -269,7 +271,7 @@ strpos($_SERVER['REQUEST_URI'],"faq.php")==false && strpos($_SERVER['REQUEST_URI
                             </div>
                         </div>
                     </div>
-                    <!--
+
                     <div class="dropdown-divider m-0"></div>
                     <a href="#" class="dropdown-item" data-action="app-reset">
                         <span data-i18n="drpdwn.reset_layout">Reset Layout</span>
@@ -294,22 +296,22 @@ strpos($_SERVER['REQUEST_URI'],"faq.php")==false && strpos($_SERVER['REQUEST_URI
                             <a href="#?lang=fr" class="dropdown-item" data-action="lang" data-lang="fr">Français</a>
                             <a href="#?lang=en" class="dropdown-item active" data-action="lang" data-lang="en">English (US)</a>
                             <a href="#?lang=es" class="dropdown-item" data-action="lang" data-lang="es">Español</a>
-                            <a href="#?lang=ru" class="dropdown-item" data-action="lang" data-lang="ru">Русский язык</a>
-                            <a href="#?lang=jp" class="dropdown-item" data-action="lang" data-lang="jp">日本語</a>
-                            <a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="ch">中文</a>
+                            <a href="#?lang=ru" class="dropdown-item" data-action="lang" data-lang="ru">??????? ????</a>
+                            <a href="#?lang=jp" class="dropdown-item" data-action="lang" data-lang="jp">???</a>
+                            <a href="#?lang=ch" class="dropdown-item" data-action="lang" data-lang="ch">??</a>
                         </div>
                     </div>
-                    -->
+
                     <div class="dropdown-divider m-0"></div>
 
                     <a class="dropdown-item fw-500 pt-3 pb-3" href="php/clearSession.php" id="btn-logout">
                         <span data-i18n="drpdwn.page-logout">Logout</span>
                         <span class="float-right fw-n">&commat;<?= $_SESSION['u_email']; ?></span>
                     </a>
-                </div>
+                </div> -->
             <?php
             }else{ ?>
-                <a href="login.php" title="drlantern@gotbootstrap.com" class="header-icon d-flex align-items-center justify-content-center ml-2" style="color: #0000ff">
+                <a href="login.php" title="webphone" class="header-icon d-flex align-items-center justify-content-center ml-2" style="color: #0000ff">
                     <strong>Đăng nhập</strong>
                 </a>
            <?php }

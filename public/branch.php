@@ -13,11 +13,13 @@ $_head = '	<!-- Optional: page related CSS-->
 
 ';
 $_description = 'Branch';
-if(count($_SESSION)==0) header("Location: login.php");
+//if(count($_SESSION)==0) header("Location: login.php");
+if(!isset($_SESSION['web_phone'])) header("Location: login.php");
+
 /*if($_SESSION['u_type'] =='Patient'){
     header("Location: dashboard.php");
 }*/
-
+//print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <!-- 
@@ -38,7 +40,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 <?php include_once APP_PATH.'/includes/nav.php'; ?>
                 <div class="page-content-wrapper">
                     <?php include_once APP_PATH.'/includes/header.php'; ?>
-                    <?php //include_once 'modal/modal_clinical.php'; ?>
+
                     <!-- BEGIN Page Content-->
                     <!-- the #js-page-content id is needed for some plugins to initialize -->
                     <main id="js-page-content" role="main" class="page-content">
@@ -169,7 +171,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
         <script type="text/javascript">
             var u_id_login='<?php echo $_SESSION['u_id'];?>';
-            var u_type_login='<?php echo $_SESSION['u_type'];?>';
+            var role_login='<?php echo $_SESSION['role'];?>';
 
         </script>
 

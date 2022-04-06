@@ -6,15 +6,19 @@ header('Access-Control-Allow-Credentials: true');
 
 if (!session_id()) session_start();
 
-$data = $_POST['data'];
+$user = $_POST['user'];
 
 //print_r($data); die();
-foreach ($data as $key => $value) {
+foreach ($user as $key => $value) {
     $_SESSION[$key] = $value;
 }
+$acl = $_POST['acl'];
+$role = $_POST['role'];
+$_SESSION["acl"] = $acl;
+$_SESSION["role"] = $role;
 //print_r($_SESSION); die();
 $_SESSION['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
-
+$_SESSION['web_phone'] = 1;
 $_tmp = '';
 $_tmp2 = '';
 if ($_SERVER['HTTP_HOST'] == 'localhost') {
@@ -27,4 +31,6 @@ if ($_SERVER['HTTP_HOST'] == 'localhost') {
 
 $_SESSION['server_host'] = $_tmp2;
 $_SESSION['server_api'] = $_tmp;
-echo json_encode(true);
+
+
+echo json_encode($_SESSION['web_phone']);

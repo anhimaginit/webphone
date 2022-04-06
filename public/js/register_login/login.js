@@ -50,32 +50,36 @@ login.prototype = {
             error : function (status,xhr,error) {
             },
             success: function (res) {
-                console.log(res);
+                //console.log(res);
+                //return false;
                 if(res.response.length>0){
-                    login.prototype.saveSession(res.response[0]);
+                    login.prototype.saveSession(res.response[0],res.acl,res.role);
                 }
             }
         });
 
     },
 
-    saveSession: function (_data) {
+    saveSession: function (user,acl,role) {
         return $.ajax({
             url: link._saveSession,
             type: 'post',
-            data: { data: _data },
+            data: { user: user,acl:acl,role:role},
             success: function (res) {
-                //console.log(res)
-                //console.log(_data.u_type)
+                //console.log(role)
+                //console.log(user.u_type)
                 //return false
+
                 var _path = host2 + 'dashboard.php'
-                if(_data.u_type =='super_admin' || _data.u_type =='company_manager'){
+                if(role =='super_admin' || role =='company_manager'){
                     _path = host2 + 'dashboard_admin.php'
-                }else if(_data.u_type =='branch_manager'){
+                }else if(role =='branch_manager'){
                     _path = host2 + 'branch.php'
                 }
 
-                document.location.href = _path;
+                if(res==1){
+                    document.location.href = _path;
+                }
             }
         });
     },

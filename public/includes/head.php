@@ -17,6 +17,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="<?= ASSETS_URL ?>/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?= ASSETS_URL ?>/img/favicon/favicon-32x32.png">
     <link rel="mask-icon" href="<?= ASSETS_URL ?>/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
     <meta name="hostname" content="<?= SERVER_NAME ?>">
     <meta name="app-url" content="<?= APP_URL ?>">
     <meta name="assets-url" content="<?= ASSETS_URL ?>">
