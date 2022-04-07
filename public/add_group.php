@@ -3,7 +3,7 @@ session_start();
 require_once 'init.php';
 
 $_title = 'Wellcome Webphone';
-$_active_nav = 'Add Group';
+$_active_nav = 'Group';
 $_head = '	<!-- Optional: page related CSS-->
 
 	<link rel="stylesheet" media="screen, print" href="'.ASSETS_URL.'/css/fa-brands.css">
@@ -12,7 +12,7 @@ $_head = '	<!-- Optional: page related CSS-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
 
 ';
-$_description = 'Add Group';
+$_description = 'Group';
 //if(count($_SESSION)==0) header("Location: login.php");
 if(!isset($_SESSION['web_phone'])) header("Location: login.php");
 if($_SESSION['role'] !=="super_admin") header("Location: dashboard.php");
@@ -41,19 +41,19 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 <?php include_once APP_PATH.'/includes/nav.php'; ?>
                 <div class="page-content-wrapper">
                     <?php include_once APP_PATH.'/includes/header.php'; ?>
-
+                    <?php include_once 'modal/modal_success.php'; ?>
                     <!-- BEGIN Page Content-->
                     <!-- the #js-page-content id is needed for some plugins to initialize -->
                     <main id="js-page-content" role="main" class="page-content">
                         <ol class="breadcrumb page-breadcrumb">
                             <li class="breadcrumb-item"><a href="dashboard.php">Webphone</a></li>
                             
-                            <li class="breadcrumb-item active" >Group >Add <span id="appt-name"></span></li>
+                            <li class="breadcrumb-item active" ><span id="add-edit-breadcrumb">Group >Add </span></li>
                             <li class="position-absolute pos-top pos-right d-none d-sm-block"><span class="js-get-date"></span></li>
                         </ol>
                         <div class="subheader row">
                             <h1 class="subheader-title col-8">
-                                <i style="color: black" class='subheader-icon fas fa-calendar-check'></i>Add Group<span id="b-name-text"></span>
+                                <i style="color: black" class='subheader-icon fas fa-calendar-check'></i><span id="add-edit-txt">Add Group</span>
                             </h1>
                         </div>
                         
@@ -70,9 +70,10 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                     </div>
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label  for="b_name">Group Name</label>
+                                            <label  for="b_name">Group Name <span id="g_name-err" class="color-alert" style="display: none">This name can't use</span></label>
                                             <input class="form-control view"  type="text" id="g_name">
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -86,11 +87,15 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                                     <div class="col-6">
                                         <div class="form-group">
                                             <label  for="b_name">List Users</label>
-                                            <div class="col-12 b-gray51" id="list-users" style="display: none"></div>
+                                            <div class="col-12 b-gray51" id="list-users" style="min-height: 35px; max-height: 200px; overflow-y:auto"></div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="row m-t20">
+                                    <div class="col-2">
+                                        <button class="btn btn-danger form-control" id="btn-add-grp">Add Group</button>
+                                    </div>
+                                </div>
                             </div>
 
                             <!--end panel-->
@@ -114,6 +119,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
 
         </script>
         <script src="<?= APP_URL; ?>/js/select2.js" type="text/javascript"></script>
+        <script src="<?= APP_URL; ?>/js/common_f.js" type="text/javascript"></script>
         <script src="<?= APP_URL; ?>/js/group/group.js" type="text/javascript"></script>
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
