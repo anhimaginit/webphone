@@ -100,7 +100,7 @@ dashboard_admin.prototype = {
     get_companies: function(u_id,u_type){
         var text_search = $('#c-name').val();
         var _link =link._companies;
-        var _data ={limit:1,offset:0,u_id:u_id,u_type:u_type,text_search:text_search}
+        var _data ={auth:_auth, limit:1,offset:0,u_id:u_id,u_type:u_type,text_search:text_search}
 
         var $pagination = $('#c-list-pagination');
         var defaultOpts = {
@@ -140,7 +140,7 @@ dashboard_admin.prototype = {
                         //fetch content and render here
                         var cursor = (page-1)*10
                         var limit = 10;
-                        var _data =_data ={limit:limit,offset:cursor,u_id:u_id,u_type:u_type,text_search:text_search}
+                        var _data =_data ={auth:_auth,limit:limit,offset:cursor,u_id:u_id,u_type:u_type,text_search:text_search}
 
                         var tr='';
                         $.ajax({
@@ -172,7 +172,7 @@ dashboard_admin.prototype = {
     },
 
     branch_bids:function(b_ids){
-        var _data ={b_ids:b_ids,token:_token}
+        var _data ={auth:_auth,b_ids:b_ids,auth:_auth}
 
         var link3 = link._branch_bids;
         $.ajax({
@@ -186,7 +186,7 @@ dashboard_admin.prototype = {
             error : function (status,xhr,error) {
             },
             success: function (res) {
-                console.log(res);
+                //console.log(res);
                 var i=0;
                 var tr=''
                 res.response.results.forEach(function(item){

@@ -36,7 +36,7 @@ login.prototype = {
             return
         }
 
-        var _data ={u_email:u_email,u_password:u_password,token:_token}
+        var _data ={u_email:u_email,u_password:u_password,auth:_auth}
 
         var link3 = link._login;
         $.ajax({

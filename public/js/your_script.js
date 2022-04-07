@@ -51,10 +51,12 @@ var link = {
 
     /**-----------ACL---------------------------- */
     _roles:host + '_roles.php',
+    _group_add_update:host + '_group_add_update.php',
+    _groups:host + '_groups.php',
 };
 
-    var _token = 'd2FycmFudHlfYnJhbmRvbl9wcm9qZWN0';
-    localStorage.setItemValue('token', _token);
+    var _auth = 'd2FycmFudHlfYnJhbmRvbl9wcm9qZWN0';
+    localStorage.setItemValue('auth', _auth);
 
 var getUrlParameter1 = function getUrlParameter1(sParam) {
     var sPageURL = document.location.href.substring(document.location.href.indexOf('?') + 1),

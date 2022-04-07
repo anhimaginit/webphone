@@ -6,7 +6,7 @@ select2_f.DESCRIPTION  = "Class select2_f";
 
 select2_f.prototype.constructor = select2_f;
 select2_f.prototype = {
-     searchUser:function(elememt,text_holder){
+     searchUser:function(elememt,text_holder,el_append){
         var link3 =link._users_search;
 
         $(elememt).select2({
@@ -22,12 +22,11 @@ select2_f.prototype = {
                 "async": true,
                 "crossDomain": true,
                 "url": link3,
-                "method": "POST",
+                "type": "POST",
                 dataType: 'json',
                 delay: 300,
-                contentType: 'application/json',
                 data: function (params) {
-                    var _data = {token:_token,u_name:params.term}
+                    var _data = {auth:_auth,u_name:params.term}
                     return _data;
                 },
                 processResults: function (data, params) {
@@ -41,7 +40,7 @@ select2_f.prototype = {
                             id: obj.u_id
                         };
                     });
-                    console.log(data);
+                    //console.log(data);
                     return { results: data1 }
 
                 },
@@ -58,7 +57,28 @@ select2_f.prototype = {
                 if (item.text) return item.text;
                 else return item.id;
             }
-        })
+        }).on('change', function () {
+                var this_val = this.value;
+                if (this.value && this.value.length > 0) {
+                    var name = $(this).find(':selected').text();
+                    var span_user = '<span class="urs-name delete b-round m-tr10" style="cursor: pointer">' +
+                        '<input class="u_id" type="hidden" value="'+this.value+'">' +
+                        '<span class="p-trbl10"><span class="u_name">'+name+'</span>&nbsp;&nbsp; <strong class="color-alert">X</strong></span>' +
+                        '</span>';
+
+                    var flag = true;
+                    $(el_append + " .u_id").each(function(){
+                        if($(this).val()==this_val){
+                            flag = false;
+                            return false;
+                        }
+
+                    })
+
+                    if(flag) $(el_append).append(span_user);
+
+                }
+            });
     }
 
 

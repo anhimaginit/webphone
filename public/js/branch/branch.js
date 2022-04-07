@@ -31,7 +31,7 @@ branch.prototype = {
 
 
     get_brand_uid:function(u_id){
-        var _data ={u_id:u_id,token:_token}
+        var _data ={auth:_auth,u_id:u_id,auth:_auth}
 
         var link3 = link._branch_uid;
         $.ajax({
