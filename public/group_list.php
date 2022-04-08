@@ -16,7 +16,7 @@ $_description = 'Group List';
 
 if(!isset($_SESSION['web_phone'])) header("Location: login.php");
 
-if($_SESSION['u_type'] =="user"){
+if($_SESSION['u_type'] !=ROLE_SUPER_ADMIN){
     header("Location: dashboard.php");
 }
 
@@ -44,7 +44,7 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 <div class="page-content-wrapper">
                     <?php include_once APP_PATH.'/includes/header.php'; ?>
                     <!-- BEGIN Page Content -->
-                    <?php //include_once 'modal/modal_success.php'; ?>
+                    <?php include_once 'modal/modal_success.php'; ?>
                     <!-- the #js-page-content id is needed for some plugins to initialize -->
                     <main id="js-page-content" role="main" class="page-content">
                         <ol class="breadcrumb page-breadcrumb">

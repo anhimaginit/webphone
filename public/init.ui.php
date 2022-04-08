@@ -24,7 +24,7 @@ if (session_id()){
                     'Role' =>[
                         'title' => 'Role',
                         'icon' => 'fa fa-lg fa-fw fa-sliders',
-                        'url' => APP_URL.'/role.php'
+                        'url' => APP_URL.'/acl.php'
                     ],
                     'Groups' => [
                         'title' => 'Groups',
@@ -36,7 +36,7 @@ if (session_id()){
                             ],
                             'AddGroup' => [
                                 'title' => 'Add Group',
-                                'url' => APP_URL.'/add_group.php'
+                                'url' => APP_URL.'/group.php'
                             ]
                         ]
 
@@ -54,7 +54,7 @@ if (session_id()){
                     ],
                     'Company_add' =>[
                         'title' => 'Add',
-                        'url' => APP_URL.'/add_company.php'
+                        'url' => APP_URL.'/company.php'
                     ],
                 ]
 
@@ -69,7 +69,7 @@ if (session_id()){
                     ],
                     'Branch_add' =>[
                         'title' => 'Add',
-                        'url' => APP_URL.'/add_branch.php'
+                        'url' => APP_URL.'/branch.php'
                     ],
                 ]
 
@@ -88,7 +88,7 @@ if (session_id()){
             $comp_menu = [
                 'title' => 'Company Info',
                 'icon' => 'fa fa-lg fa-fw fa-institution',
-                'url' => APP_URL.'/add_company.php'
+                'url' => APP_URL.'/company.php'
             ];
             $brand_menu = [
                 'title' => 'Branch',
@@ -100,7 +100,7 @@ if (session_id()){
                     ],
                     'Branch_add' =>[
                         'title' => 'Add Branch',
-                        'url' => APP_URL.'/add_branch.php'
+                        'url' => APP_URL.'/branch.php'
                     ],
                 ]
 
@@ -117,12 +117,12 @@ if (session_id()){
             $comp_menu = [
                 'title' => 'Company',
                 'icon' => 'fa fa-lg fa-fw fa-institution',
-                'url' => APP_URL.'/add_company.php'
+                'url' => APP_URL.'/company.php'
             ];
             $brand_menu = [
                 'title' => 'Branch',
                 'icon' => 'fa fa-lg fa-fw fa-institution',
-                'url' => APP_URL.'/add_branch.php'
+                'url' => APP_URL.'/branch.php'
             ];
             $user_menu = [
                 'title' => 'User',
@@ -136,12 +136,12 @@ if (session_id()){
             $comp_menu = [
                 'title' => 'Company',
                 'icon' => 'fa fa-lg fa-fw fa-institution',
-                'url' => APP_URL.'/add_company.php'
+                'url' => APP_URL.'/company.php'
             ];
             $brand_menu = [
                 'title' => 'Branch',
                 'icon' => 'fa fa-lg fa-fw fa-institution',
-                'url' => APP_URL.'/add_branch.php'
+                'url' => APP_URL.'/branch.php'
             ];
             $_nav['comp_menu'] =$comp_menu;
             $_nav['brand_menu'] =$brand_menu;

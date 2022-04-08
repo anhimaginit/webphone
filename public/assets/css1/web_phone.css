@@ -144,7 +144,7 @@
     opacity: 0.5!important;
 }
 
-.txt-l15{text-align: left:padding-left:15px}
+.txt-l15{text-align: left!important;padding-left:15px}
 
 /*********vertical middle******************/
 .outer {

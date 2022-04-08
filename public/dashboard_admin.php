@@ -16,7 +16,7 @@ $_description = 'Admin';
 
 if(!isset($_SESSION['web_phone'])) header("Location: login.php");
 
-if($_SESSION['u_type'] =="user"){
+if($_SESSION['u_type'] ==ROLE_USER){
     header("Location: dashboard.php");
 }
 

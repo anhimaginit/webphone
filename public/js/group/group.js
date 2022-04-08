@@ -9,6 +9,14 @@ group.prototype = {
     init:function(){
         select2_f.prototype.searchUser("#add-group #u-selected","Search User","#add-group #list-users")
         common_f.prototype.roles("#add-group .role_id")
+
+        var id = getUrlParameter1('id');
+        if(id !="" && id !=undefined){
+            $("#add-edit-breadcrumb").text("Group >Edit")
+            $("#add-edit-txt").text("Edit Group")
+            $("#add-group #btn-add-grp").text("Update Group");
+            group.prototype.getGrpBy_gID(id)
+        }
         //event
         $('#add-group #list-users').on('click','.delete',function(){
             $(this).remove();
@@ -95,6 +103,54 @@ group.prototype = {
                        },2000)
                    }
                }
+            }
+        });
+    },
+
+    getGrpBy_gID:function(g_id){
+        var _link =link._groups;
+        var _data ={auth:_auth, limit:1,offset:0,g_id:g_id}
+
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            "url": _link,
+            "method": "POST",
+            dataType: 'json',
+            data:_data,
+            //contentType: 'application/json',
+            error : function (status,xhr,error) {
+            },
+            success: function (res) {
+                if(res.response.row_cnt >0){
+                    var data = res.response.results[0];
+
+                    var span_user =''
+
+                    if(data.u_name.indexOf(";")){
+                       var u_names =data.u_name.split(";");
+                        u_names.forEach(function(itm){
+                            var itm_temp = itm.split(",")
+
+                           span_user += '<span class="urs-name delete b-round m-tr10" style="cursor: pointer">' +
+                                '<input class="u_id" type="hidden" value="'+itm_temp[1]+'">' +
+                                '<span class="p-trbl10"><span class="u_name">'+itm_temp[0]+'</span>&nbsp;&nbsp; <strong class="color-alert">X</strong></span>' +
+                                '</span>';
+                        })
+                    }else if(u_names !=''){
+                        var itm_temp = data.u_name.split(",")
+                        span_user += '<span class="urs-name delete b-round m-tr10" style="cursor: pointer">' +
+                            '<input class="u_id" type="hidden" value="'+itm_temp[1]+'">' +
+                            '<span class="p-trbl10"><span class="u_name">'+itm_temp[0]+'</span>&nbsp;&nbsp; <strong class="color-alert">X</strong></span>' +
+                            '</span>';
+                    }
+
+                    $("#add-group .role_id option[value='"+data.g_role+"']").attr("selected","selected");
+                    $("#add-group #g_name").val(data.g_name);
+                    $("#add-group #list-users").html(span_user);
+                    $("#add-group #g_id").val(data.g_id);
+                }
+                //
             }
         });
     }

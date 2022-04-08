@@ -13,43 +13,47 @@ group_list.prototype = {
 
         })
 
-
         $('#g-reset').unbind('click').bind('click',function(){
             $('#g-name').val('');
 
+        })
+
+        $('#g-list tbody').on("click",".delete",function(){
+            var g_id = $(this).closest("td").find(".g_id").val();
+            group_list.prototype.deleteGrp_gID(g_id,$(this));
         })
 
     },
 
     tr_content:function(item,i){
         var span_user =''
-        var u_names = item.u_name;
         if(item.u_name.indexOf(";")){
-            u_names =item.u_name.split(";");
+            var u_names =item.u_name.split(";");
+            u_names.forEach(function(itm){
+                var itm_temp = itm.split(",")
+                span_user =(span_user=="")?itm_temp[0]:span_user+", "+itm_temp[0];
+            })
+        }else if(item.u_name !=""){
+            var itm_temp = item.u_name.split(",")
+            span_user =(span_user=="")?itm_temp[0]:span_user+", "+itm_temp[0];
         }
 
-        u_names.forEach(function(itm){
-            var itm_temp = itm.split(",")
-            span_user += '<span class="urs-name b-round m-tr10">' +
-                '<input class="u_id" type="hidden" value="'+itm_temp[1]+'">' +
-                '<span class="p-trbl10"><span class="u_name">'+itm_temp[0]+'</span></span>' +
-                '</span>';
-        })
         var tr ='<tr>' +
-            '<td><input type="hidden" class="g_id" value="'+item.g_id+'"> '+i+'</td>' +
+            '<td>'+i+'</td>' +
             '<td class="txt-l15">'+item.g_name+'</td>' +
             '<td class="txt-l15">'+item.g_role+'</td>' +
             '<td class="txt-l15">'+span_user+'</td>' +
-            '<td><span class="delete f-bold p_rl10 color-alert" style="cursor: pointer">&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;</span>' +
-            '<a href="add_group.php?id='+item.g_id+'"><span class="edit p_rl10" style="cursor: pointer">&nbsp;&nbsp;&nbsp;<i class="fa fa-edit color_blue"></i></span>&nbsp;&nbsp;&nbsp;</a>' +
-            
+            '<td><input type="hidden" class="g_id" value="'+item.g_id+'">' +
+            '<span class="delete f-bold p_rl10 color-alert" style="cursor: pointer">&nbsp;&nbsp;&nbsp;X&nbsp;&nbsp;&nbsp;</span>' +
+            '<a href="group.php?id='+item.g_id+'"><span class="edit p_rl10" style="cursor: pointer">&nbsp;&nbsp;&nbsp;<i class="fa fa-edit color_blue"></i></span>&nbsp;&nbsp;&nbsp;</a>' +
+
             '</td>' +
           '</tr>';
 
         return tr;
     },
 
-    groups: function(u_id,u_type){
+    groups: function(){
         var g_name = $('#g-name').val();
         var member = $('#u-name').val();
         var _link =link._groups;
@@ -123,6 +127,42 @@ group_list.prototype = {
             }
         });
     },
+
+    deleteGrp_gID:function(g_id,$me){
+        var _link =link._groupsDelete_gID;
+        var _data ={auth:_auth,g_id:g_id}
+
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            "url": _link,
+            "method": "POST",
+            dataType: 'json',
+            data:_data,
+            //contentType: 'application/json',
+            error : function (status,xhr,error) {
+            },
+            success: function (res) {
+                //console.log(res);
+                if(res.delete ==true){
+                    $me.closest('tr').remove();
+                    $("#modal-success .modal-title").text("Delete success");
+                    $("#modal-success").modal("show")
+                    setTimeout(function(){
+                        $("#modal-success").modal("hide")
+                    },2000)
+
+                }else{
+                    $("#modal-error #err-message").text("Can't delete the item")
+                    $("#modal-error").modal("show")
+                    setTimeout(function(){
+                        $("#modal-error").modal("hide")
+                    },2000)
+                }
+                //
+            }
+        });
+    }
 
 }
 var gp = new group_list();

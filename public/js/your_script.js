@@ -53,11 +53,17 @@ var link = {
     _roles:host + '_roles.php',
     _group_add_update:host + '_group_add_update.php',
     _groups:host + '_groups.php',
+    _groupsDelete_gID:host + '_groupsDelete_gID.php',
+    _groups_role:host + '_groups_role.php',
 };
-
+//define
     var _auth = 'd2FycmFudHlfYnJhbmRvbl9wcm9qZWN0';
     localStorage.setItemValue('auth', _auth);
 
+var role_super_admin ="super_admin";
+var role_company_manager ="company_manager";
+var role_branch_manager ="branch_manager";
+var role_user ="user";
 var getUrlParameter1 = function getUrlParameter1(sParam) {
     var sPageURL = document.location.href.substring(document.location.href.indexOf('?') + 1),
         sURLVariables = sPageURL.split('&'),

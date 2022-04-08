@@ -33,5 +33,7 @@ common_f.prototype = {
                 $(el).append(option)
             }
         });
-    }
+    },
+
+
 }

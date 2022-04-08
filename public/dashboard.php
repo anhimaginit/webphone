@@ -13,7 +13,8 @@ $_head = '	<!-- Optional: page related CSS-->
 
 ';
 $_description = 'Branch';
-if(count($_SESSION)==0) header("Location: login.php");
+if(!isset($_SESSION['web_phone'])) header("Location: login.php");
+//if(count($_SESSION)==0) header("Location: login.php");
 /*if($_SESSION['u_type'] =='Patient'){
     header("Location: dashboard.php");
 }*/
