@@ -22,6 +22,11 @@ acl.prototype = {
             acl.prototype.getACL_gID($(this).val())
         })
 
+        $('#acl-view #body-acl').on('click','.btnapdateacl',function(){
+            //console.log("test");
+            acl.prototype.update_acl()
+        })
+
     },
 
     getGrp_role:function(role){
@@ -43,8 +48,8 @@ acl.prototype = {
             success: function (res) {
                 //console.log(res);
                 var data =res.response;
+                $("#acl-view #g_id").html('<option value=""></option>')
                 if(data.length >0){
-                    $("#acl-view #g_id").html('<option value=""></option>')
                     var grps="";
                     data.forEach(function(item){
                         grps +='<option value= "'+item.g_id+'">'+item.g_name+'</option>'
@@ -78,7 +83,9 @@ acl.prototype = {
                     var data = res.response.results[0].acl;
                    // console.log(data.acl);
                     for (let key in data) {
-                        acl.prototype.processACLFields(key,data);
+                        //console.log("key="+key+"----");
+                        //console.log(data+"----");
+                        acl.prototype.processACLFields(key,data[key]);
                     }
                 }
                 //
@@ -100,7 +107,7 @@ acl.prototype = {
                     var view = obj[k_field]["view"];
                     var add = obj[k_field]["add"];
                     var edit = obj[k_field]["edit"];
-
+                    //console.log("view="+view+";add="+add+";edit="+edit)
                     tr +='<tr class="tr_acl">' +
                         '<td >'+k_field+'<input class="key" type="hidden" value="'+k_field+'"></td>'+
                         acl.prototype.td_acl(view,add,edit)+
@@ -111,6 +118,8 @@ acl.prototype = {
             case "Assigned_Integration":
                 for(let k_field in obj){
                     var k_field_t = k_field.split("_")
+                    //console.log("k_field="+k_field+";");
+                    //console.log("k_field_t="+k_field_t+";");
                     var key_name = k_field;
                     if(k_field_t[0] =="i"){
                         key_name = "Integration"
@@ -216,17 +225,20 @@ acl.prototype = {
 
         tab ='<div class="tab-pane fade show acl '+active+'" id="'+key+'" role="tabpanel">' +
                 '<div class="table-responsive-lg col-12">' +
-                    '<table class="table table-bordered m-0 t-normal-l table-acl">' +
+                    '<table class="table table-bordered m-0 t-normal-l table-acl '+key+'">' +
                         '<thead>'+
                             '<tr>'+
-                                '<th style="width: 150px">Filed Name</th>'+
+                                '<th style="max-width: 300px">Filed Name</th>'+
                                 '<th>Permission</th>'+
                             '</tr>'+
                         '</thead>'+
                         '<tbody>'+
-                            tr
+                            tr +
                         '</tbody>' +
                     '</table>' +
+                '</div>' +
+                '<div class="col-12 mt10pb30">' +
+                    '<button class="btn btn-danger btnapdateacl f-r w100px">Update</button> ' +
                 '</div>' +
             '</div>'
 
@@ -239,26 +251,87 @@ acl.prototype = {
         var view_v =(view)?'checked="checked"':'';
         var add_v =(add)?'checked="checked"':'';
         var edit_v =(edit)?'checked="checked"':'';
-
         var td =
             '<td class="v-key">' +
                 '<div class="row col-12">'+
-                    '<div class="custom-control custom-checkbox custom-control-inline">'+
-                        '<input type="checkbox" class="custom-control-input view" '+view_v+'>'+
-                        '<label class="custom-control-label" for="view">View</label>'+
+                    '<div class="custom-control custom-control-inline">' +
+                        '<label class="custom-checkbox">' +
+                            '<input type=checkbox class="custom-control-input view" '+view_v+'> ' +
+                            '<span class="custom-label p_rl20">View</span>' +
+                        '</label>' +
                     '</div>'+
-                    '<div class="custom-control custom-checkbox custom-control-inline">'+
-                        '<input type="checkbox" class="custom-control-input add" '+add_v+'>'+
-                        '<label class="custom-control-label" for="add">Add</label>'+
+                    '<div class="custom-control custom-control-inline">' +
+                        '<label class="custom-checkbox">' +
+                            '<input type=checkbox class="custom-control-input add" '+add_v+'> ' +
+                            '<span class="custom-label p_rl20">Add</span>' +
+                        '</label>' +
                     '</div>'+
-                    '<div class="custom-control custom-checkbox custom-control-inline">'+
-                        '<input type="checkbox" class="custom-control-input edit" '+edit_v+'>'+
-                        '<label class="custom-control-label" for="edit">Edit</label>'+
+                    '<div class="custom-control custom-control-inline">' +
+                        '<label class="custom-checkbox">' +
+                            '<input type=checkbox class="custom-control-input edit" '+edit_v+'> ' +
+                            '<span class="custom-label p_rl20">Edit</span>' +
+                        '</label>' +
                     '</div>'+
                 '</div>' +
-            '</td>';
-
+                '</td>';
         return td;
+    },
+
+    update_acl:function(){
+        var acl = {};
+        var acl_form ={};
+        $("#acl-view table.table-acl").each(function(){
+            acl_form ={}
+            var key = $(this).closest('.tab-pane').attr("id")
+            var $me = $(this)
+            $me.find('tbody tr').each(function(){
+                var key_field = $(this).find('.key').val();
+                var view =$(this).find('.view').is(":checked");
+                var add =$(this).find('.add').is(":checked");
+                var edit =$(this).find('.edit').is(":checked");
+
+                acl_form[key_field] = {view:view,add:add,edit:edit}
+                //console.log(key_field +",")
+            })
+
+            acl[key] =acl_form;
+            //console.log("--------------------------------")
+
+        })
+
+        //console.log(acl)
+        var _link =link._acl_update;
+        var _data ={auth:_auth, acl:acl,g_id:$('#acl-view #g_id').val() ,u_id:u_id_login}
+
+        $.ajax({
+            "async": true,
+            "crossDomain": true,
+            "url": _link,
+            "method": "POST",
+            dataType: 'json',
+            data:_data,
+            //contentType: 'application/json',
+            error : function (status,xhr,error) {
+            },
+            success: function (res) {
+                if(res.Update ==true){
+                    $("#modal-success").modal("show")
+                    setTimeout(function(){
+                        $("#modal-success").modal("hide")
+                    },2000)
+
+                }else{
+                    $("#modal-error #err-message").text(res.ERROR)
+                    $("#modal-error").modal("show")
+                    setTimeout(function(){
+                        $("#modal-error").modal("hide")
+                    },2000)
+                }
+
+                //
+            }
+        });
+
     }
 
 

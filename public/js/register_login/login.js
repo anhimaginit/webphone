@@ -50,7 +50,7 @@ login.prototype = {
             error : function (status,xhr,error) {
             },
             success: function (res) {
-                //console.log(res);
+                //console.log(res.acl);
                 //return false;
                 if(res.response.length>0){
                     login.prototype.saveSession(res.response[0],res.acl,res.role);

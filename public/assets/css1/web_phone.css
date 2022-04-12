@@ -5,6 +5,8 @@
 .p_rl10{
     padding-right: 10px;padding-left: 10px;display: inline-block;
 }
+.p_rl20{padding-left: 20px;display: inline-block;}
+
 .p_r{padding-right: 0}
 .p-r10{padding-right: 10px;}
 .p-rl10{padding-right: 10px; padding-left: 10px}
@@ -79,6 +81,14 @@
     margin-top: 5px; margin-right: 10px; display: inline-block;
 }
 
+.mt10pb30{
+    margin-top: 10px;padding-bottom: 30px;
+}
+
+.f-r{float: right}
+
+
+
 /*
 .btn-succ{background-color: #27aae1;border-color: #27aae1;color: #fff;box-shadow:0 2px 6px 0 rgb(39 170 225 / 50%);}
 */
@@ -104,10 +114,14 @@
 
 .w49{width: 49px}
 .w100{width: 100%}
+.w100px{width: 100px}
 .w80{width: 80px;}
 .h{height: 100%}
 
 .t-normal thead th, .t-normal tbody td{font-weight: 200;text-align: center;font-size: 13px}
+
+.t-normal-l thead th, .t-normal-l tbody td{font-weight: 200;text-align: left;font-size: 13px}
+.t-normal-l thead th{font-weight: 200;text-align: left;font-size: 15px}
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
@@ -254,5 +268,38 @@ input#upload_file {
 }
 
 .modal { overflow: auto !important; }
-/***********pdf********************/
-
+/***********check box********************/
+.custom-checkbox{
+    position: relative;
+}
+.custom-checkbox input{
+    visibility: hidden;
+    margin-right: 8px;
+}
+.custom-label:before,.custom-label:after{
+    width: 16px;
+    height: 16px;
+    content: "";
+    border: 1px solid;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    border: #adb5bd solid 1px;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    border-radius: .25rem;
+}
+.custom-checkbox input:checked + .custom-label:before{
+    border-color: #007bff;
+    background-color: #007bff;
+}
+.custom-checkbox input:checked + .custom-label:after{
+    width: 4px;
+    border: 2px solid #ffffff;
+    height: 8px;
+    border-top: none;
+    border-left: none;
+    transform: rotate(40deg);
+    left: 6px;
+    top: 3px;
+}
