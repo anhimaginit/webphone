@@ -27,7 +27,7 @@ group.prototype = {
         })
 
         $('#add-group #g_name').change(function(){
-            if($(this).val()== "super_admin" || $(this).val()== "_default"){
+            if($(this).val()== "super_admin_default" || $(this).val()== "user_default"){
                 $('#add-group #g_name-err').css({"display":""})
                 setTimeout(function(){
                     $('#add-group #g_name').val("");

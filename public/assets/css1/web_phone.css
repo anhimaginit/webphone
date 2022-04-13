@@ -87,8 +87,6 @@
 
 .f-r{float: right}
 
-
-
 /*
 .btn-succ{background-color: #27aae1;border-color: #27aae1;color: #fff;box-shadow:0 2px 6px 0 rgb(39 170 225 / 50%);}
 */
@@ -159,6 +157,10 @@
 }
 
 .txt-l15{text-align: left!important;padding-left:15px}
+
+.f_uppercase::first-letter {
+    text-transform:capitalize;
+}
 
 /*********vertical middle******************/
 .outer {

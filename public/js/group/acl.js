@@ -31,7 +31,7 @@ acl.prototype = {
 
     getGrp_role:function(role){
         var _link =link._groups_role;
-        var _data ={auth:_auth,g_role:role,g_name:$("#acl-view #g_name").val()}
+        var _data ={auth:_auth,g_role:role,g_name:$("#acl-view #g_name").val(),all:1}
 
         if(role =="") return;
 
@@ -65,8 +65,8 @@ acl.prototype = {
         $('#acl-view #ul-acl').html("")
         $('#acl-view #body-acl').html("")
 
-        var _link =link._groups;
-        var _data ={auth:_auth, limit:1,offset:0,g_id:g_id}
+        var _link =link._group_gID;
+        var _data ={auth:_auth,g_id:g_id}
 
         $.ajax({
             "async": true,
@@ -79,7 +79,7 @@ acl.prototype = {
             error : function (status,xhr,error) {
             },
             success: function (res) {
-                if(res.response.row_cnt >0){
+                if(res.response.results.length >0){
                     var data = res.response.results[0].acl;
                    // console.log(data.acl);
                     for (let key in data) {
@@ -101,7 +101,7 @@ acl.prototype = {
         var tab='';
         var active ="";
         switch(key){
-            case "Permission":
+            case "permission":
                 active = "active";
                 for(let k_field in obj){
                     var view = obj[k_field]["view"];
@@ -115,7 +115,7 @@ acl.prototype = {
                 }
 
                 break;
-            case "Assigned_Integration":
+            case "assigned_integration":
                 for(let k_field in obj){
                     var k_field_t = k_field.split("_")
                     //console.log("k_field="+k_field+";");
@@ -139,7 +139,7 @@ acl.prototype = {
                         '</tr>';
                 }
                 break;
-            case "Branch":
+            case "branch":
                 for(let k_field in obj){
                     var k_field_t = k_field.split("_")
                     var key_name = k_field;
@@ -159,7 +159,7 @@ acl.prototype = {
                         '</tr>';
                 }
                 break;
-            case "Company":
+            case "company":
                 for(let k_field in obj){
                     var k_field_t = k_field.split("_")
                     //var key_name = k_field;
@@ -176,7 +176,7 @@ acl.prototype = {
                         '</tr>';
                 }
                 break;
-            case "Integration":
+            case "integrations":
                 for(let k_field in obj){
                     var k_field_t = k_field.split("_")
                     var key_name = k_field;
@@ -196,8 +196,7 @@ acl.prototype = {
                         '</tr>';
                 }
                 break;
-            case "User":
-
+            case "user":
                 for(let k_field in obj){
                     var k_field_t = k_field.split("_")
                     var key_name = k_field;
@@ -217,10 +216,25 @@ acl.prototype = {
                         '</tr>';
                 }
                 break;
+            default:
+                for(let k_field in obj){
+                    var key_name = k_field;
+
+                    var view = obj[k_field]["view"];
+                    var add = obj[k_field]["add"];
+                    var edit = obj[k_field]["edit"];
+
+                    tr +='<tr class="tr_acl">' +
+                        '<td >'+key_name+'<input class="key" type="hidden" value="'+k_field+'"></td>'+
+                        acl.prototype.td_acl(view,add,edit)+
+                        '</tr>';
+                }
+                break;
+
         }
 
         li +='<li class="nav-item ">'+
-            '<a class="nav-link '+active+'" data-toggle="tab" href="#'+key+'" role="tab">'+key+'</a>'+
+            '<a class="nav-link f_uppercase '+active+'" data-toggle="tab" href="#'+key+'" role="tab">'+key+'</a>'+
             '</li>'
 
         tab ='<div class="tab-pane fade show acl '+active+'" id="'+key+'" role="tabpanel">' +

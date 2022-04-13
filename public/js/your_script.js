@@ -56,6 +56,7 @@ var link = {
     _groupsDelete_gID:host + '_groupsDelete_gID.php',
     _groups_role:host + '_groups_role.php',
     _acl_update:host + '_acl_update.php',
+    _group_gID:host + '_group_gID.php',
 };
 //define
     var _auth = 'd2FycmFudHlfYnJhbmRvbl9wcm9qZWN0';
